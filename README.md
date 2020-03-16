@@ -6,11 +6,19 @@ This is an implementation that will integrate OPA with a centrally managed polic
 
 ## Running the example
 
-1. Running a 
+0. Download an OPA binary.
+
+On the terminal, `cd` into the directory of this example.
+
+The latest version can be found in the download section from the official [openpolicyagent.org](https://www.openpolicyagent.org/docs/latest/#1-download-opa) webpage. The project offers binaries for Mac and Linux.
+
+Following the instructions on that page should give you a binary by the name of `opa`. Make sure it's executable with `chmod 755 ./opa`.
+
+1. Running on
 
 1.a. Mac/Linux.
 
-Run ./agent.sh from a terminal. On a corporate you may need to request admin priviledges beforehands. This is required, because OPA will open outbound connections.
+With the binary downloaded in step 0, run ./agent.sh from a terminal. On a corporate you may need to request admin priviledges beforehands. This is required, because OPA will open outbound connections.
 
 1.b. Windows
 
