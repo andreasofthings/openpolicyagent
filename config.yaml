@@ -1,0 +1,33 @@
+services:
+  - name: demo
+    url: https://www.pramari.de/opa/v1
+    credentials:
+      bearer:
+        token: "bGFza2RqZmxha3NkamZsa2Fqc2Rsa2ZqYWtsc2RqZmtramRmYWxkc2tm"
+
+# discovery:
+#  name: /discovery
+
+labels:
+  app: demo-app
+  region: west
+  environment: production
+
+bundle:
+  name: http-policy
+  prefix: bundles
+  service: demo
+  polling:
+    min_delay_seconds: 30
+    max_delay_seconds: 60
+
+decision_logs:
+  service: demo
+  reporting:
+    min_delay_seconds: 120
+    max_delay_seconds: 180
+
+status:
+  service: demo
+
+default_decision: http/allow
